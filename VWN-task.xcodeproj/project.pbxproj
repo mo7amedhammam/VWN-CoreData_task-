@@ -16,6 +16,7 @@
 		C8D339D8280AEE81000056BA /* VWN_taskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339D7280AEE81000056BA /* VWN_taskTests.swift */; };
 		C8D339E2280AEE81000056BA /* VWN_taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339E1280AEE81000056BA /* VWN_taskUITests.swift */; };
 		C8D339E4280AEE81000056BA /* VWN_taskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339E3280AEE81000056BA /* VWN_taskUITestsLaunchTests.swift */; };
+		C8D339F6280AF0B7000056BA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339F5280AF0B7000056BA /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C8D339DD280AEE81000056BA /* VWN-taskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VWN-taskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D339E1280AEE81000056BA /* VWN_taskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWN_taskUITests.swift; sourceTree = "<group>"; };
 		C8D339E3280AEE81000056BA /* VWN_taskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWN_taskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C8D339F5280AF0B7000056BA /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		C8D339C0280AEE7E000056BA /* VWN-task */ = {
 			isa = PBXGroup;
 			children = (
+				C8D339F0280AEEE0000056BA /* TaskModules */,
 				C8D339C1280AEE7E000056BA /* VWN_taskApp.swift */,
 				C8D339C3280AEE7E000056BA /* ContentView.swift */,
 				C8D339C5280AEE80000056BA /* Assets.xcassets */,
@@ -131,6 +134,46 @@
 				C8D339E3280AEE81000056BA /* VWN_taskUITestsLaunchTests.swift */,
 			);
 			path = "VWN-taskUITests";
+			sourceTree = "<group>";
+		};
+		C8D339F0280AEEE0000056BA /* TaskModules */ = {
+			isa = PBXGroup;
+			children = (
+				C8D339F4280AEFC8000056BA /* ListProductModule */,
+				C8D339F3280AEF7E000056BA /* AddProductModule */,
+				C8D339F2280AEF71000056BA /* LoginModule */,
+				C8D339F1280AEF29000056BA /* WelcomeModule */,
+			);
+			path = TaskModules;
+			sourceTree = "<group>";
+		};
+		C8D339F1280AEF29000056BA /* WelcomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				C8D339F5280AF0B7000056BA /* WelcomeView.swift */,
+			);
+			path = WelcomeModule;
+			sourceTree = "<group>";
+		};
+		C8D339F2280AEF71000056BA /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		C8D339F3280AEF7E000056BA /* AddProductModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddProductModule;
+			sourceTree = "<group>";
+		};
+		C8D339F4280AEFC8000056BA /* ListProductModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ListProductModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D339F6280AF0B7000056BA /* WelcomeView.swift in Sources */,
 				C8D339CB280AEE80000056BA /* Persistence.swift in Sources */,
 				C8D339C4280AEE7E000056BA /* ContentView.swift in Sources */,
 				C8D339CE280AEE80000056BA /* VWN_task.xcdatamodeld in Sources */,

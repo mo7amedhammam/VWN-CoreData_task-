@@ -20,6 +20,7 @@
 		C8D339F8280B03B0000056BA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339F7280B03B0000056BA /* LoginView.swift */; };
 		C8D339FB280B05E4000056BA /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339FA280B05E4000056BA /* Helper.swift */; };
 		C8D339FD280B3B89000056BA /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339FC280B3B89000056BA /* AddProductView.swift */; };
+		C8D339FF280B5DA6000056BA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339FE280B5DA6000056BA /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C8D339F7280B03B0000056BA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C8D339FA280B05E4000056BA /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C8D339FC280B3B89000056BA /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
+		C8D339FE280B5DA6000056BA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				C8D339FA280B05E4000056BA /* Helper.swift */,
+				C8D339FE280B5DA6000056BA /* ImagePicker.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				C8D339F8280B03B0000056BA /* LoginView.swift in Sources */,
 				C8D339FB280B05E4000056BA /* Helper.swift in Sources */,
 				C8D339F6280AF0B7000056BA /* WelcomeView.swift in Sources */,
+				C8D339FF280B5DA6000056BA /* ImagePicker.swift in Sources */,
 				C8D339CB280AEE80000056BA /* Persistence.swift in Sources */,
 				C8D339FD280B3B89000056BA /* AddProductView.swift in Sources */,
 				C8D339C4280AEE7E000056BA /* ContentView.swift in Sources */,

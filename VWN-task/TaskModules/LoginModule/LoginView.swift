@@ -30,7 +30,7 @@ struct LoginView: View {
                     .padding(.top,1)
 
                 VStack {
-                    InputTextField( text: UserName ,title: "UserName")
+                    InputTextField( text: $UserName ,title: "UserName")
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                     .textInputAutocapitalization(.never)
@@ -59,7 +59,10 @@ struct LoginView: View {
                     if UserName == "admin" && Password == "admin"{
                         print("Success Login")
                     } else{
+                        
                         print("Wrong username or password")
+                        print(UserName)
+                        print(Password)
                     }
                     
                 }, label: {

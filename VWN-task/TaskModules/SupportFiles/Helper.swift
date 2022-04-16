@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct InputTextField: View {
-    @State var text: String
+    @Binding var text: String
     var title : String
     let screenWidth = UIScreen.main.bounds.size.width - 50
     var body: some View {
@@ -47,7 +47,7 @@ struct InputTextField: View {
 
 struct InputTextField_Previews: PreviewProvider {
     static var previews: some View {
-        InputTextField(text: "text", title: "Title")
+        InputTextField(text: .constant("text"), title: "Title")
     }
 }
 

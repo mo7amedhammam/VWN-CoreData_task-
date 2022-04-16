@@ -105,7 +105,7 @@ struct LoginView: View {
         )
         
         .edgesIgnoringSafeArea(.all)
-    
+        .navigationBarHidden(true)
         
     }
 }

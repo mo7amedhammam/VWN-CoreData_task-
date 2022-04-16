@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8D339C2280AEE7E000056BA /* VWN_taskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339C1280AEE7E000056BA /* VWN_taskApp.swift */; };
+		C8D339C4280AEE7E000056BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339C3280AEE7E000056BA /* ContentView.swift */; };
+		C8D339C6280AEE80000056BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D339C5280AEE80000056BA /* Assets.xcassets */; };
+		C8D339C9280AEE80000056BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D339C8280AEE80000056BA /* Preview Assets.xcassets */; };
+		C8D339CB280AEE80000056BA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339CA280AEE80000056BA /* Persistence.swift */; };
+		C8D339CE280AEE80000056BA /* VWN_task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8D339CC280AEE80000056BA /* VWN_task.xcdatamodeld */; };
+		C8D339D8280AEE81000056BA /* VWN_taskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339D7280AEE81000056BA /* VWN_taskTests.swift */; };
+		C8D339E2280AEE81000056BA /* VWN_taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339E1280AEE81000056BA /* VWN_taskUITests.swift */; };
+		C8D339E4280AEE81000056BA /* VWN_taskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339E3280AEE81000056BA /* VWN_taskUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8D339D4280AEE81000056BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8D339B6280AEE7E000056BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8D339BD280AEE7E000056BA;
+			remoteInfo = "VWN-task";
+		};
+		C8D339DE280AEE81000056BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8D339B6280AEE7E000056BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8D339BD280AEE7E000056BA;
+			remoteInfo = "VWN-task";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C8D339BE280AEE7E000056BA /* VWN-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VWN-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D339C1280AEE7E000056BA /* VWN_taskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWN_taskApp.swift; sourceTree = "<group>"; };
+		C8D339C3280AEE7E000056BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C8D339C5280AEE80000056BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8D339C8280AEE80000056BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8D339CA280AEE80000056BA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		C8D339CD280AEE80000056BA /* VWN_task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VWN_task.xcdatamodel; sourceTree = "<group>"; };
+		C8D339D3280AEE81000056BA /* VWN-taskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VWN-taskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D339D7280AEE81000056BA /* VWN_taskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWN_taskTests.swift; sourceTree = "<group>"; };
+		C8D339DD280AEE81000056BA /* VWN-taskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VWN-taskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D339E1280AEE81000056BA /* VWN_taskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWN_taskUITests.swift; sourceTree = "<group>"; };
+		C8D339E3280AEE81000056BA /* VWN_taskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWN_taskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8D339BB280AEE7E000056BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D339D0280AEE81000056BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D339DA280AEE81000056BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8D339B5280AEE7E000056BA = {
+			isa = PBXGroup;
+			children = (
+				C8D339C0280AEE7E000056BA /* VWN-task */,
+				C8D339D6280AEE81000056BA /* VWN-taskTests */,
+				C8D339E0280AEE81000056BA /* VWN-taskUITests */,
+				C8D339BF280AEE7E000056BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8D339BF280AEE7E000056BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8D339BE280AEE7E000056BA /* VWN-task.app */,
+				C8D339D3280AEE81000056BA /* VWN-taskTests.xctest */,
+				C8D339DD280AEE81000056BA /* VWN-taskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8D339C0280AEE7E000056BA /* VWN-task */ = {
+			isa = PBXGroup;
+			children = (
+				C8D339C1280AEE7E000056BA /* VWN_taskApp.swift */,
+				C8D339C3280AEE7E000056BA /* ContentView.swift */,
+				C8D339C5280AEE80000056BA /* Assets.xcassets */,
+				C8D339CA280AEE80000056BA /* Persistence.swift */,
+				C8D339CC280AEE80000056BA /* VWN_task.xcdatamodeld */,
+				C8D339C7280AEE80000056BA /* Preview Content */,
+			);
+			path = "VWN-task";
+			sourceTree = "<group>";
+		};
+		C8D339C7280AEE80000056BA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C8D339C8280AEE80000056BA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8D339D6280AEE81000056BA /* VWN-taskTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8D339D7280AEE81000056BA /* VWN_taskTests.swift */,
+			);
+			path = "VWN-taskTests";
+			sourceTree = "<group>";
+		};
+		C8D339E0280AEE81000056BA /* VWN-taskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C8D339E1280AEE81000056BA /* VWN_taskUITests.swift */,
+				C8D339E3280AEE81000056BA /* VWN_taskUITestsLaunchTests.swift */,
+			);
+			path = "VWN-taskUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8D339BD280AEE7E000056BA /* VWN-task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8D339E7280AEE81000056BA /* Build configuration list for PBXNativeTarget "VWN-task" */;
+			buildPhases = (
+				C8D339BA280AEE7E000056BA /* Sources */,
+				C8D339BB280AEE7E000056BA /* Frameworks */,
+				C8D339BC280AEE7E000056BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VWN-task";
+			productName = "VWN-task";
+			productReference = C8D339BE280AEE7E000056BA /* VWN-task.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8D339D2280AEE81000056BA /* VWN-taskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8D339EA280AEE81000056BA /* Build configuration list for PBXNativeTarget "VWN-taskTests" */;
+			buildPhases = (
+				C8D339CF280AEE81000056BA /* Sources */,
+				C8D339D0280AEE81000056BA /* Frameworks */,
+				C8D339D1280AEE81000056BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8D339D5280AEE81000056BA /* PBXTargetDependency */,
+			);
+			name = "VWN-taskTests";
+			productName = "VWN-taskTests";
+			productReference = C8D339D3280AEE81000056BA /* VWN-taskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C8D339DC280AEE81000056BA /* VWN-taskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8D339ED280AEE81000056BA /* Build configuration list for PBXNativeTarget "VWN-taskUITests" */;
+			buildPhases = (
+				C8D339D9280AEE81000056BA /* Sources */,
+				C8D339DA280AEE81000056BA /* Frameworks */,
+				C8D339DB280AEE81000056BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8D339DF280AEE81000056BA /* PBXTargetDependency */,
+			);
+			name = "VWN-taskUITests";
+			productName = "VWN-taskUITests";
+			productReference = C8D339DD280AEE81000056BA /* VWN-taskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8D339B6280AEE7E000056BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					C8D339BD280AEE7E000056BA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					C8D339D2280AEE81000056BA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C8D339BD280AEE7E000056BA;
+					};
+					C8D339DC280AEE81000056BA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C8D339BD280AEE7E000056BA;
+					};
+				};
+			};
+			buildConfigurationList = C8D339B9280AEE7E000056BA /* Build configuration list for PBXProject "VWN-task" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8D339B5280AEE7E000056BA;
+			productRefGroup = C8D339BF280AEE7E000056BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8D339BD280AEE7E000056BA /* VWN-task */,
+				C8D339D2280AEE81000056BA /* VWN-taskTests */,
+				C8D339DC280AEE81000056BA /* VWN-taskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8D339BC280AEE7E000056BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D339C9280AEE80000056BA /* Preview Assets.xcassets in Resources */,
+				C8D339C6280AEE80000056BA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D339D1280AEE81000056BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D339DB280AEE81000056BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8D339BA280AEE7E000056BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D339CB280AEE80000056BA /* Persistence.swift in Sources */,
+				C8D339C4280AEE7E000056BA /* ContentView.swift in Sources */,
+				C8D339CE280AEE80000056BA /* VWN_task.xcdatamodeld in Sources */,
+				C8D339C2280AEE7E000056BA /* VWN_taskApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D339CF280AEE81000056BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D339D8280AEE81000056BA /* VWN_taskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D339D9280AEE81000056BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D339E4280AEE81000056BA /* VWN_taskUITestsLaunchTests.swift in Sources */,
+				C8D339E2280AEE81000056BA /* VWN_taskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8D339D5280AEE81000056BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8D339BD280AEE7E000056BA /* VWN-task */;
+			targetProxy = C8D339D4280AEE81000056BA /* PBXContainerItemProxy */;
+		};
+		C8D339DF280AEE81000056BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8D339BD280AEE7E000056BA /* VWN-task */;
+			targetProxy = C8D339DE280AEE81000056BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C8D339E5280AEE81000056BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C8D339E6280AEE81000056BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8D339E8280AEE81000056BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VWN-task/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Mohamed.Hammam.VWN-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8D339E9280AEE81000056BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VWN-task/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Mohamed.Hammam.VWN-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C8D339EB280AEE81000056BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Mohamed.Hammam.VWN-taskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VWN-task.app/VWN-task";
+			};
+			name = Debug;
+		};
+		C8D339EC280AEE81000056BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Mohamed.Hammam.VWN-taskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VWN-task.app/VWN-task";
+			};
+			name = Release;
+		};
+		C8D339EE280AEE81000056BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Mohamed.Hammam.VWN-taskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "VWN-task";
+			};
+			name = Debug;
+		};
+		C8D339EF280AEE81000056BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Mohamed.Hammam.VWN-taskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "VWN-task";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8D339B9280AEE7E000056BA /* Build configuration list for PBXProject "VWN-task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D339E5280AEE81000056BA /* Debug */,
+				C8D339E6280AEE81000056BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8D339E7280AEE81000056BA /* Build configuration list for PBXNativeTarget "VWN-task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D339E8280AEE81000056BA /* Debug */,
+				C8D339E9280AEE81000056BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8D339EA280AEE81000056BA /* Build configuration list for PBXNativeTarget "VWN-taskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D339EB280AEE81000056BA /* Debug */,
+				C8D339EC280AEE81000056BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8D339ED280AEE81000056BA /* Build configuration list for PBXNativeTarget "VWN-taskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D339EE280AEE81000056BA /* Debug */,
+				C8D339EF280AEE81000056BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C8D339CC280AEE80000056BA /* VWN_task.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C8D339CD280AEE80000056BA /* VWN_task.xcdatamodel */,
+			);
+			currentVersion = C8D339CD280AEE80000056BA /* VWN_task.xcdatamodel */;
+			path = VWN_task.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C8D339B6280AEE7E000056BA /* Project object */;
+}

@@ -12,7 +12,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.name, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
     
@@ -24,8 +24,6 @@ struct ContentView: View {
         NavigationView{
             ZStack{
         WelcomeView()
-
-
             .onChange(of: scenePhase, perform: { newPhase in
                     if newPhase == .active {
                         print("Active")
@@ -69,11 +67,15 @@ struct ContentView: View {
 //        }
     }
 
-    private func addItem() {
+     func addItem(name: String, info: String, meal: String, type: String,price:Double) {
         withAnimation {
             let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
+//            newItem.timestamp = Date()
+            newItem.name = name
+            newItem.info = info
+            newItem.meal = meal
+            newItem.type = type
+            newItem.price = price
             do {
                 try viewContext.save()
             } catch {
@@ -86,21 +88,21 @@ struct ContentView: View {
     }
 
     
-    func save() {
-        let context = viewContext
-
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Show some error here
-            }
-        }
-    }
+//    func save() {
+//        let context = viewContext
+//
+//        if context.hasChanges {
+//            do {
+//                try context.save()
+//            } catch {
+//                // Show some error here
+//            }
+//        }
+//    }
+//
     
     
-    
-    private func deleteItems(offsets: IndexSet) {
+     func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
 
@@ -131,3 +133,5 @@ struct ContentView_Previews: PreviewProvider {
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+
+

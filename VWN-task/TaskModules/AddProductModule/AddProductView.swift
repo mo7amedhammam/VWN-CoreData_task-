@@ -32,7 +32,8 @@ struct AddProductView: View {
     @State var showsheet = false
 
 
-    @State var Password = ""
+    @State var gotoalistproduct = false
+
     
     var body: some View {
         NavigationView {
@@ -45,6 +46,8 @@ struct AddProductView: View {
                             .multilineTextAlignment(.center)
                             .font(.system(size: 17))
                             .padding(.top,1)
+                            Text(items[0].name ?? "" )
+
                         Spacer()
                         }.padding()
                         
@@ -216,6 +219,10 @@ struct AddProductView: View {
                             print(meal)
                             print(itemType)
                             print(price)
+                            
+                            addItem(name: ProductName, info: ProductInfo, meal: meal, type: itemType, price: Double(price) ?? 0.0)
+                            
+                            gotoalistproduct = true
                         }, label: {
                             HStack {
                                 Text("Done")
@@ -290,17 +297,72 @@ struct AddProductView: View {
                 }
                 
         }
+
         }
         .navigationTitle("add product")
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: Button (action: {
-            self.presentationMode.wrappedValue.dismiss()
+//        .navigationBarItems(leading: Button (action: {
+//            self.presentationMode.wrappedValue.dismiss()
+//
+//        }, label: {
+//            Text("Add Product")
+//        }))
+        
+        //            //  go to clinic info
+                    NavigationLink(destination:ListproductView(),isActive: $gotoalistproduct) {
+                          }
 
-        }, label: {
-            Text("Add Product")
-        }))
         
     }
+    
+    
+    
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.name, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<Item>
+    
+   private func addItem(name: String, info: String, meal: String, type: String,price:Double) {
+       withAnimation {
+           let newItem = Item(context: viewContext)
+//            newItem.timestamp = Date()
+           newItem.name = name
+           newItem.info = info
+           newItem.meal = meal
+           newItem.type = type
+           newItem.price = price
+           
+           do {
+               try viewContext.save()
+           } catch {
+               // Replace this implementation with code to handle the error appropriately.
+               // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+               let nsError = error as NSError
+               fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+           }
+       }
+   }
+
+    func deleteItems(offsets: IndexSet) {
+       withAnimation {
+           offsets.map { items[$0] }.forEach(viewContext.delete)
+
+           do {
+               try viewContext.save()
+           } catch {
+               // Replace this implementation with code to handle the error appropriately.
+               // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+               let nsError = error as NSError
+               fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+           }
+       }
+   }
+
+    
+    
+    
 }
 
 struct AddProductView_Previews: PreviewProvider {
@@ -336,3 +398,6 @@ struct myPicker: View {
         }
     }
 }
+
+
+

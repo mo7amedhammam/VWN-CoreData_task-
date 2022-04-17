@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C82AFF38280C759500B1B953 /* CustomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82AFF37280C759500B1B953 /* CustomSheet.swift */; };
+		C82AFF3A280CA0B200B1B953 /* ListproductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82AFF39280CA0B200B1B953 /* ListproductView.swift */; };
 		C8D339C2280AEE7E000056BA /* VWN_taskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339C1280AEE7E000056BA /* VWN_taskApp.swift */; };
 		C8D339C4280AEE7E000056BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339C3280AEE7E000056BA /* ContentView.swift */; };
 		C8D339C6280AEE80000056BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D339C5280AEE80000056BA /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		C82AFF37280C759500B1B953 /* CustomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheet.swift; sourceTree = "<group>"; };
+		C82AFF39280CA0B200B1B953 /* ListproductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListproductView.swift; sourceTree = "<group>"; };
 		C8D339BE280AEE7E000056BA /* VWN-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VWN-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D339C1280AEE7E000056BA /* VWN_taskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWN_taskApp.swift; sourceTree = "<group>"; };
 		C8D339C3280AEE7E000056BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		C8D339F4280AEFC8000056BA /* ListProductModule */ = {
 			isa = PBXGroup;
 			children = (
+				C82AFF39280CA0B200B1B953 /* ListproductView.swift */,
 			);
 			path = ListProductModule;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82AFF3A280CA0B200B1B953 /* ListproductView.swift in Sources */,
 				C82AFF38280C759500B1B953 /* CustomSheet.swift in Sources */,
 				C8D339F8280B03B0000056BA /* LoginView.swift in Sources */,
 				C8D339FB280B05E4000056BA /* Helper.swift in Sources */,

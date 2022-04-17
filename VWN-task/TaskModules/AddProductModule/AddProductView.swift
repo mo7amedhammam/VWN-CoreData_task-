@@ -67,6 +67,16 @@ struct AddProductView: View {
                                                     .frame(width: 80, height: 80, alignment: .center)
                                                     .background(Color.white.opacity(0.5))
                                                     .cornerRadius(12)
+                                                               
+                                                ForEach(Imgarr, id:\.self){im in
+                                                    Image(uiImage: im)
+                                                        .resizable()
+                                                        .foregroundColor(Color.black.opacity(0.6))
+                                                        .font(.title)
+                                                        .frame(width: 80, height: 80, alignment: .center)
+                                                        .cornerRadius(12)
+                                                    
+                                                }
                                                 
         //                                        ForEach(Imgarr, id:\.self) { pho in
         //                                            ZStack(alignment: .topLeading ){
@@ -258,7 +268,9 @@ struct AddProductView: View {
                 Image("BackgroundImg")
                     .resizable()
             )
-          
+            .onChange(of: image){newim in
+                Imgarr.append(newim)
+            }
             .edgesIgnoringSafeArea(.all)
             
             //MARK: -------- imagePicker From Camera and Library ------

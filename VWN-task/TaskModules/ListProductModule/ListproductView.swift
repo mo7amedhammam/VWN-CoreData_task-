@@ -26,12 +26,13 @@ struct ListproductView: View {
         NavigationView {
             ZStack{
                     VStack{
-                        Spacer().frame(height:50)
+//                        Spacer().frame(height:50)
 
                         Text("What would you\n like to eat")
                             .font(.system(size: 33))
                             .bold()
                             .multilineTextAlignment(.center)
+                            .padding(.top, 80)
 //                        ScrollView {
 
                         ScrollView() {
@@ -39,7 +40,7 @@ struct ListproductView: View {
                                             LazyVGrid(columns: vGridLayout, spacing: 10) {
                                                 
                                                 
-                                                ForEach(0..<8){_ in
+                                                ForEach(items, id:\.self){item in
                                                 VStack{
                                                     Image("WelcomeImg")
                                                         .resizable()
@@ -49,11 +50,12 @@ struct ListproductView: View {
                                                     VStack{
 
                                                         HStack {
-                                                            Text("product name").font(.system(size: 22))
+                                                            Text( item.name ?? "" )
+                                                                .font(.system(size: 22))
                                                             Spacer()
                                                         }
                                                         HStack {
-                                                            Text("price").font(.system(size: 18))
+                                                            Text(String(item.price )).font(.system(size: 18))
                                                             Spacer()
                                                         }
 
@@ -69,19 +71,19 @@ struct ListproductView: View {
 //                                                        .padding(.horizontal, 20)
 
                                                 }
+                                                .onDelete(perform: deleteItems)
+
                                                 
                                                 
-                                                ForEach(items, id:\.self){item in
 
-                                                    Text(item.name ?? "")
-                                                    Text(item.info ?? "")
-
-
-                                                }
+                                               
 
                                             }
                                       
                         }
+                        .listStyle(.plain)
+
+
                         .padding(.horizontal,10)
                             
                         Spacer()
@@ -100,16 +102,42 @@ struct ListproductView: View {
           
             .edgesIgnoringSafeArea(.all)
             
+
+            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+//                    EditButton()
+                    Button (action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        Text("Add Product")
+                    })
+                }
+            }
+            
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+////                    EditButton()
+//                    Button(action: {
+//                        
+//                    }, label: {
+//                        Text("Clear")
+//                    })
+//                }
+//            }
             
         }
+                   
+
 //        .navigationTitle("What would you\n like to eat")
+        .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         
-        .navigationBarItems(leading: Button (action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }, label: {
-            Text("Add Product")
-        }))
+//        .navigationBarItems(leading: Button (action: {
+//            self.presentationMode.wrappedValue.dismiss()
+//        }, label: {
+//            Text("Add Product")
+//        }))
         
     }
     

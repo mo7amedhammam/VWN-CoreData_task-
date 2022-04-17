@@ -220,7 +220,7 @@ struct AddProductView: View {
                             print(itemType)
                             print(price)
                             
-                            addItem(name: ProductName, info: ProductInfo, meal: meal, type: itemType, price: Double(price) ?? 0.0)
+                            addItem(name: ProductName, info: ProductInfo, meal: meal, type: itemType, price: Double(price) ?? 0.0, image: image)
                             
                             gotoalistproduct = true
                         }, label: {
@@ -324,7 +324,7 @@ struct AddProductView: View {
         animation: .default)
     private var items: FetchedResults<Item>
     
-   private func addItem(name: String, info: String, meal: String, type: String,price:Double) {
+   private func addItem(name: String, info: String, meal: String, type: String,price:Double, image:UIImage) {
        withAnimation {
            let newItem = Item(context: viewContext)
 //            newItem.timestamp = Date()
@@ -333,6 +333,19 @@ struct AddProductView: View {
            newItem.meal = meal
            newItem.type = type
            newItem.price = price
+           
+//           newItem.image = image
+
+//           if Imgarr.isEmpty == false {
+//               let imageInput = imagearr(context: viewContext)
+//               for img in Imgarr {
+                 if let data = image.jpegData(compressionQuality: 0.5) {
+//                   let imageInput = Item(context: viewContext)
+                   newItem.image = data
+//                   imageInput.defect = defectInput
+                 }
+//               }
+//           }
            
            do {
                try viewContext.save()

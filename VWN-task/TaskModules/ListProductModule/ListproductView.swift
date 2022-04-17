@@ -42,7 +42,10 @@ struct ListproductView: View {
                                                 
                                                 ForEach(items, id:\.self){item in
                                                 VStack{
-                                                    Image("WelcomeImg")
+//                                                    Image("WelcomeImg")
+
+
+                                                    Image(uiImage: (UIImage(data: item.image ?? Data()) ?? UIImage(named: "WelcomeImg")) ?? UIImage())
                                                         .resizable()
                                                         .frame(height:150)
                                                         .padding(.horizontal,10)
@@ -150,7 +153,7 @@ struct ListproductView: View {
         animation: .default)
     private var items: FetchedResults<Item>
     
-   private func addItem(name: String, info: String, meal: String, type: String,price:Double) {
+    private func addItem(name: String, info: String, meal: String, type: String,price:Double) {
        withAnimation {
            let newItem = Item(context: viewContext)
 //            newItem.timestamp = Date()

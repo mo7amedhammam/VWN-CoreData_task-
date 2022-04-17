@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C82AFF38280C759500B1B953 /* CustomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82AFF37280C759500B1B953 /* CustomSheet.swift */; };
 		C8D339C2280AEE7E000056BA /* VWN_taskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339C1280AEE7E000056BA /* VWN_taskApp.swift */; };
 		C8D339C4280AEE7E000056BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D339C3280AEE7E000056BA /* ContentView.swift */; };
 		C8D339C6280AEE80000056BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D339C5280AEE80000056BA /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C82AFF37280C759500B1B953 /* CustomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheet.swift; sourceTree = "<group>"; };
 		C8D339BE280AEE7E000056BA /* VWN-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VWN-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D339C1280AEE7E000056BA /* VWN_taskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWN_taskApp.swift; sourceTree = "<group>"; };
 		C8D339C3280AEE7E000056BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				C8D339FA280B05E4000056BA /* Helper.swift */,
 				C8D339FE280B5DA6000056BA /* ImagePicker.swift */,
+				C82AFF37280C759500B1B953 /* CustomSheet.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82AFF38280C759500B1B953 /* CustomSheet.swift in Sources */,
 				C8D339F8280B03B0000056BA /* LoginView.swift in Sources */,
 				C8D339FB280B05E4000056BA /* Helper.swift in Sources */,
 				C8D339F6280AF0B7000056BA /* WelcomeView.swift in Sources */,

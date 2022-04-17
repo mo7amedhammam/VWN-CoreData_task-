@@ -7,6 +7,13 @@
 
 import SwiftUI
 struct AddProductView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State var meals = ["meal1", "meal2", "meal3", "meal4","meal5", "meal6"]
+    @State var types = ["Type1", "Type2", "Type3", "Type4","Type5", "Type6"]
+    @State var sheetTitle = 0
+    @State var sheetsourse : [String] = []
+
+    
 //    @FocusState private var isfocused : Bool
     var columns = Array(repeating: GridItem(.fixed(120), spacing: 8), count: 3)
     @State var showImageSheet = false
@@ -21,6 +28,8 @@ struct AddProductView: View {
     @State var meal = ""
     @State var itemType = ""
     @State var price = ""
+
+    @State var showsheet = false
 
 
     @State var Password = ""
@@ -111,8 +120,13 @@ struct AddProductView: View {
         ////                                .foregroundColor(Color("lightGray"))
         //                        }
         //                    }
+                            
+
+
                             Button (action:{
-                                
+                                sheetTitle = 1
+                                sheetsourse = meals
+                                showsheet = true
                             }, label: {
                                 ZStack(alignment: .leading){
                                 HStack{
@@ -135,7 +149,9 @@ struct AddProductView: View {
                                 .buttonStyle(.plain)
 
                             Button (action:{
-                                
+                                sheetTitle = 2
+                                sheetsourse = types
+                                showsheet = true
                             }, label: {
                                 ZStack(alignment: .leading){
                                 HStack{
@@ -165,12 +181,12 @@ struct AddProductView: View {
                                     .textInputAutocapitalization(.never)
 
                                 }
-                                    HStack{
-                                        Spacer()
-                                        Image(systemName: "chevron.forward")
-                                            .padding(.trailing)
-            //                                .foregroundColor(Color("lightGray"))
-                                    }
+//                                    HStack{
+//                                        Spacer()
+//                                        Image(systemName: "chevron.forward")
+//                                            .padding(.trailing)
+//            //                                .foregroundColor(Color("lightGray"))
+//                                    }
                                 }.padding(.horizontal )
                             
                             
@@ -185,8 +201,11 @@ struct AddProductView: View {
                         
                         Button(action: {
                             // add review
-                        
-                            
+                        print(ProductName)
+                            print(ProductInfo)
+                            print(meal)
+                            print(itemType)
+                            print(price)
                         }, label: {
                             HStack {
                                 Text("Done")
@@ -204,19 +223,42 @@ struct AddProductView: View {
                             .padding(.horizontal, 20)
                         }).padding(.top)
 
-                        
+
                        
                         
                         Spacer()
                     }
                     .frame(width:UIScreen.main.bounds.width)
                 }
-        }
+        
+                if showsheet{
+                    CustomSheet(IsPresented: $showsheet, content: {
+                        Text( sheetTitle == 1 ? "choose meal":"choose ype" )
+                        
+                        ForEach(0..<sheetsourse.count , id:\.self) { ix in
+                            Button(action: {
+                                if sheetTitle == 1{
+                                meal = sheetsourse[ix]
+                                }  else{
+                                    itemType = sheetsourse[ix]
+                                }
+                                self.showsheet = false
+                            }, label:{
+                                Text( "\(sheetsourse[ix])")
+                                    .font(.title3)
+                            })
+                                .padding()
+                        }
+                    })
+                }
+
+            }
+            
             .background(
                 Image("BackgroundImg")
                     .resizable()
             )
-            
+          
             .edgesIgnoringSafeArea(.all)
             
             //MARK: -------- imagePicker From Camera and Library ------
@@ -239,6 +281,12 @@ struct AddProductView: View {
         }
         .navigationTitle("add product")
         .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: Button (action: {
+            self.presentationMode.wrappedValue.dismiss()
+
+        }, label: {
+            Text("Add Product")
+        }))
         
     }
 }
@@ -246,5 +294,33 @@ struct AddProductView: View {
 struct AddProductView_Previews: PreviewProvider {
     static var previews: some View {
         AddProductView()
+    }
+}
+
+
+struct myPicker: View {
+   @Binding var sourceoptions: [String]
+
+    var body: some View {
+        HStack() {
+            Spacer()
+            Picker(selection: $sourceoptions, label: EmptyView()) {
+                ForEach(0..<sourceoptions.count, id: \.self) { ix in
+                    Button(action: {
+                        
+                    }, label:{
+                        Text( sourceoptions[ix] ).tag(ix)
+                    })
+                }
+                }.pickerStyle(WheelPickerStyle()).frame(width: 50).clipped().id(UUID().uuidString)
+            
+//            Picker(selection: seconds, label: EmptyView()) {
+//                ForEach((0...59), id: \.self) { ix in
+//                    Text("\(ix)").tag(ix)
+//                }
+//                }.pickerStyle(WheelPickerStyle()).frame(width: 50).clipped()
+//            Text("Sec.")
+            Spacer()
+        }
     }
 }

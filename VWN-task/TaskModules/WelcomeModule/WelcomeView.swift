@@ -39,14 +39,14 @@ struct WelcomeView: View {
                     
                     
                   
-                    Button(action: {
-                        gotoLoginView = true
-                        print("Login here")
-                    }, label: {
-                        Text("\(choice)")
-                            .foregroundColor(.black)
-                            .bold()
-                    })
+//                    Button(action: {
+//                        gotoLoginView = true
+//                        print("Login here")
+//                    }, label: {
+//                        Text("\(choice)")
+//                            .foregroundColor(.black)
+//                            .bold()
+//                    })
                     
                     Picker(selection: self.$choice, label: Text("Pick One")) {
                         

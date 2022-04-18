@@ -14,10 +14,16 @@ struct LoginView: View {
     @State var UserName = ""
     @State var Password = ""
     @State var gotoaddproduct = false
+@State var wrongusername = false
+//    let persistenceController = PersistenceController.shared
+//    @Environment(\.managedObjectContext) private var viewContext
 
-    
+//    @FetchRequest(
+//        sortDescriptors: [NSSortDescriptor(keyPath: \Item5.name, ascending: true)],
+//        animation: .default)
+//    private var items: FetchedResults<Item5>
     var body: some View {
-        NavigationView {
+//        NavigationView {
             ZStack{
                 ScrollView {
                     VStack{
@@ -61,11 +67,12 @@ struct LoginView: View {
                         
                         Button(action: {
                             // add review
-                            if UserName == "admin" && Password == "admin"{
+                            if UserName == "admin" && Password == "admin" {
                                 print("Success Login")
                                 gotoaddproduct = true
                             } else{
-                                gotoaddproduct = true
+                                wrongusername = true
+//                                gotoaddproduct = true
 
                                 print("Wrong username or password")
                                 print(UserName)
@@ -106,6 +113,15 @@ struct LoginView: View {
                     }
                     .frame(width:UIScreen.main.bounds.width)
                 }
+                
+                // alert with no ierror message
+                .alert("Wrong user name or Password", isPresented: $wrongusername) {
+                Button("Try Again", role: .cancel) {
+//                    loginAgain.toggle()
+
+                }
+                }
+                
             }
             .onAppear(perform: {
                 self.title = ""
@@ -122,7 +138,10 @@ struct LoginView: View {
             .edgesIgnoringSafeArea(.all)
             .navigationTitle(title)
 //            .navigationBarBackButtonHidden(true)
-        }
+//        }
+        
+//        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+
         .navigationBarHidden(true)
 
         

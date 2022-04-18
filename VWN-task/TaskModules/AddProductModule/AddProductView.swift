@@ -280,7 +280,14 @@ struct AddProductView: View {
 
             }
             }
-            
+            .onAppear(perform: {
+                self.ProductName = ""
+                self.ProductInfo = ""
+                self.price = ""
+                self.meal = ""
+                self.itemType = ""
+                
+            })
             .background(
                 Image("BackgroundImg")
                     .resizable()

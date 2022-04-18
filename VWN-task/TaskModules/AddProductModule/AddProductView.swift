@@ -46,7 +46,6 @@ struct AddProductView: View {
                             .multilineTextAlignment(.center)
                             .font(.system(size: 17))
                             .padding(.top,1)
-                            Text(items[0].name ?? "" )
 
                         Spacer()
                         }.padding()

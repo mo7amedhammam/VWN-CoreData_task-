@@ -329,9 +329,7 @@ struct AddProductView: View {
                     NavigationLink(destination:ListproductView(),isActive: $gotoalistproduct) {
                           }
 
-        
     }
-    
     
     
     @Environment(\.managedObjectContext) private var viewContext

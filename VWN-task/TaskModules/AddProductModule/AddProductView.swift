@@ -30,6 +30,7 @@ struct AddProductView: View {
     @State var price = ""
 
     @State var showsheet = false
+    @State var mustaddproduct = false
 
 
     @State var gotoalistproduct = false
@@ -219,9 +220,12 @@ struct AddProductView: View {
                             print(itemType)
                             print(price)
                             
-                            addItem(name: ProductName, info: ProductInfo, meal: meal, type: itemType, price: Double(price) ?? 0.0, image: image)
+                            if ProductName == "" || ProductInfo == "" || meal == "" || itemType == "" || price == "" || image.size.width <= 0{
+                                mustaddproduct = true
+                            } else {addItem(name: ProductName, info: ProductInfo, meal: meal, type: itemType, price: Double(price) ?? 0.0, image: image)
                             
                             gotoalistproduct = true
+                            }
                         }, label: {
                             HStack {
                                 Text("Done")
@@ -267,7 +271,14 @@ struct AddProductView: View {
                         }
                     })
                 }
+                
+            
+            }    // alert with no ierror message
+            .alert("add product info", isPresented: $mustaddproduct) {
+            Button("OK", role: .cancel) {
+//                    loginAgain.toggle()
 
+            }
             }
             
             .background(

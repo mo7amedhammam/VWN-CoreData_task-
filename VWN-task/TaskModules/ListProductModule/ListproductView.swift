@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import CoreData
 
 
 import SwiftUI
@@ -21,6 +21,8 @@ struct ListproductView: View {
 
 
     @State var Password = ""
+    @State var isclear = false
+
     
     var body: some View {
         NavigationView {
@@ -97,7 +99,16 @@ struct ListproductView: View {
             
 
             }
-            
+            // alert with no ierror message
+        .alert("Cleared", isPresented: $isclear) {
+        Button("Add new Product", role: .cancel) {
+//                    loginAgain.toggle()
+            self.presentationMode.wrappedValue.dismiss()
+
+
+        }
+        }
+
             .background(
                 Image("BackgroundImg")
                     .resizable()
@@ -118,16 +129,18 @@ struct ListproductView: View {
                 }
             }
             
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-////                    EditButton()
-//                    Button(action: {
-//                        
-//                    }, label: {
-//                        Text("Clear")
-//                    })
-//                }
-//            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+//                    EditButton()
+                    
+                    Button(action: {
+                    deleteAll(entityName: "Item")
+                        isclear = true
+                    }, label: {
+                        Text("Clear")
+                    })
+                }
+            }
             
         }
                    
@@ -190,7 +203,79 @@ struct ListproductView: View {
    }
 
     
+//    func DeleteAllData() ->Bool{
+//var done = false
+////            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+////            let managedContext = appDelegate.persistentContainer.viewContext
+//            let DelAllReqVar = NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: "Item"))
+//
+//        let request = NSFetchRequest<NSManagedObject>(entityName :   "Item")
+//
+//            do {
+//                try viewContext.execute(DelAllReqVar)
+//                try viewContext.fetch(request)
+//
+//                try viewContext.save()
+//done = true
+//
+//            }
+//            catch {
+//                print(error)
+//done = false
+//            }
+//        return done
+//        }
     
+   
+    func deleteAll(entityName: String) {
+
+     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+     let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+     deleteRequest.resultType = .resultTypeObjectIDs
+//     guard let context = self.container?.viewContext
+//         else { print("error in deleteAll")
+//             return }
+
+     do {
+         let result = try viewContext.execute(deleteRequest) as? NSBatchDeleteResult
+         let objectIDArray = result?.result as? [NSManagedObjectID]
+         let changes: [AnyHashable : Any] = [NSDeletedObjectsKey : objectIDArray as Any]
+         NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [viewContext])
+     } catch {
+         print(error.localizedDescription)
+     }
+ }
+    
+    
+    func DisplayData() {
+        
+        
+//         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//
+//            //represente l'ORM
+//            let persistentContainer = appDelegate.persistentContainer
+//
+//            let managedContext = persistentContainer.viewContext     //retourne NSManagedObject toujours
+            
+            //la requete retourne un NSManagedObject
+            let request = NSFetchRequest<NSManagedObject>(entityName :   "Item")
+            
+            //execution de la requete
+            do {
+            let result = try  viewContext.fetch(request)
+//            for item in result {
+//            favourites.append(item.value(forKey: "MovieName")  as! String)
+//              item.value()
+//            }
+            
+               }
+               catch {
+               print("NO DATA FOUND , Error")
+               }
+
+
+    }
+
     
 }
 
